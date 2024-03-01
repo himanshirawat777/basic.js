@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // mathod LocalStorage.setItems
+        // method LocalStorage.getItems
+
+
+        // localStorage.setItem('name','ishika')
+        //  (override...new updated value will be print....bhavila)
+        // localStorage.setItem('name','bhavika')  
+        // console.log(localStorage.getItem('name'));
+        // console.log(localStorage)
+        let myObj = {
+            name: 'ishika',
+            age: 21,
+            city: 'jodhpur'
+        }
+        // this lines means = it convert into string
+        let myObj_serialized = JSON.stringify(myObj)
+
+        // String value Set
+        localStorage.setItem('myObj',myObj_serialized);
+        console.log(myObj_serialized);
+
+        // destructuring (visual in part)
+        myObj_deserialized = JSON.parse(localStorage.getItem(myObj))
+
+        // to Show
+        console.log(myObj_deserialized);
+
+    </script>
+</body>
+
+</html>
